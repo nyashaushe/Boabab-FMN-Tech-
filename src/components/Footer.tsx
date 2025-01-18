@@ -3,7 +3,7 @@ import { Package, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const navigation = {
   solutions: [
-    { name: 'CRM System', href: '#' },
+    { name: 'SMS System', href: '#' },
     { name: 'Booking System', href: '#' },
     { name: 'Chatbot Platform', href: '#' },
     { name: 'Analytics', href: '#' },
@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="space-y-8">
             <div className="flex items-center gap-2">
               <Package className="h-8 w-8 text-indigo-500" />
-              <span className="text-white font-bold text-xl">TechSolutions</span>
+              <span className="text-white font-bold text-xl">Baobab FNM Tech</span>
             </div>
             <p className="text-sm leading-6 text-gray-300">
               Empowering businesses with innovative software solutions.
@@ -113,7 +113,7 @@ export default function Footer() {
         </div>
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-400">
-            &copy; 2024 TechSolutions, Inc. All rights reserved.
+            &copy; 2025 Baobab FNM Tech, Inc. All rights reserved.
           </p>
         </div>
       </div>

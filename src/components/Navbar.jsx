@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Package className="h-8 w-8 text-indigo-600" />
-            <span className="font-bold text-xl">TechSolutions</span>
+            <span className="font-bold text-xl">Baobab FNM Tech</span>
           </a>
         </div>
 
