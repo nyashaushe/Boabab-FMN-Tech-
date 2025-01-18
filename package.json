@@ -28,3 +28,26 @@
     "vite": "^5.4.11"
   }
 }
+<<<<<<< HEAD
+=======
+
+{
+  "name": "vite-react-javascript-starter",
+  "private": true,
+  "homepage": "https://nyashaushe.github.io/Boabab-FMN-Tech-",
+  "version": "0.0.0",
+ 
+}
+
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}
+
+>>>>>>> 17cb69e2b6020df7d1440c8a2ce4e4ef01fc8365
