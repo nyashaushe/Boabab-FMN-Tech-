@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="space-y-8">
             <div className="flex items-center gap-2">
               <Package className="h-8 w-8 text-indigo-500" />
-              <span className="text-white font-bold text-xl">TechSolutions</span>
+              <span className="text-white font-bold text-xl">Boabab FMN Tech</span>
             </div>
             <p className="text-sm leading-6 text-gray-300">
               Empowering businesses with innovative software solutions.
@@ -112,8 +112,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-400">
-            &copy; 2024 TechSolutions, Inc. All rights reserved.
+          <p className="text-xs leading-5 text-gray-400" >
+            &copy; 2025 Boabab FMN Tech, Inc. All rights reserved.
           </p>
         </div>
       </div>
