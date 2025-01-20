@@ -3,8 +3,9 @@ import { Package, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const navigation = {
   solutions: [
-    { name: 'CRM System', href: '#' },
+    { name: 'SMS System', href: '#' },
     { name: 'Booking System', href: '#' },
+    { name : 'Static Website', href: '#'},
     { name: 'Chatbot Platform', href: '#' },
     { name: 'Analytics', href: '#' },
   ],
