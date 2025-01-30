@@ -4,18 +4,21 @@ import Hero from './components/Hero';
 import ProductGrid from './components/ProductGrid';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import { ThemeProvider } from './components/ThemeProvider';
 
 function App() {
   return (
-    <div className="bg-white">
-      <Navbar />
-      <main>
-        <Hero />
-        <ProductGrid />
-        <Testimonials />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="bg-white dark:bg-gray-900">
+        <Navbar />
+        <main>
+          <Hero />
+          <ProductGrid />
+          <Testimonials />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

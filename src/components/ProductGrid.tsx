@@ -4,11 +4,13 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ProductGrid() {
   return (
-    <div className="bg-white py-24 sm:py-32" id="products">
+    <div className="bg-white dark:bg-gray-900 py-24 sm:py-32" id="products">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Products</h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+            Our Products
+          </h2>
+          <p className="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300">
             Choose from our suite of professional software solutions
           </p>
         </div>
@@ -25,10 +27,10 @@ export default function ProductGrid() {
               </div>
               <div className="max-w-xl">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
-                  <time dateTime="2024" className="text-gray-500">
+                  <time className="text-gray-500 dark:text-gray-400">
                     New Release
                   </time>
-                  <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                  <span className="relative z-10 rounded-full bg-gray-50 dark:bg-gray-800 px-3 py-1.5 font-medium text-gray-600 dark:text-gray-300">
                     {product.category}
                   </span>
                 </div>

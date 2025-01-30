@@ -1,11 +1,10 @@
 import React from 'react';
-import { Package, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { BrandIcon, getSocialIcon } from '../data/features';
 
 const navigation = {
   solutions: [
     { name: 'SMS System', href: '#' },
     { name: 'Booking System', href: '#' },
-    { name : 'Static Website', href: '#'},
     { name: 'Chatbot Platform', href: '#' },
     { name: 'Analytics', href: '#' },
   ],
@@ -25,10 +24,10 @@ const navigation = {
     { name: 'Terms', href: '#' },
   ],
   social: [
-    { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
+    { name: 'Facebook', href: '#' },
+    { name: 'Twitter', href: '#' },
+    { name: 'Instagram', href: '#' },
+    { name: 'LinkedIn', href: '#' }
   ],
 };
 
@@ -42,19 +41,22 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <div className="flex items-center gap-2">
-              <Package className="h-8 w-8 text-indigo-500" />
+              <BrandIcon className="h-8 w-8 text-indigo-500 dark:text-indigo-400" />
               <span className="text-white font-bold text-xl">Boabab FMN Tech</span>
             </div>
             <p className="text-sm leading-6 text-gray-300">
               Empowering businesses with innovative software solutions.
             </p>
             <div className="flex space-x-6">
-              {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
+              {navigation.social.map((item) => {
+                const Icon = getSocialIcon(item.name);
+                return (
+                  <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
+                    <span className="sr-only">{item.name}</span>
+                    <Icon className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                );
+              })}
             </div>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">

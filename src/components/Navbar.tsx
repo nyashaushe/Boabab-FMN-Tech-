@@ -1,5 +1,6 @@
 import React from 'react';
-import { Menu, X, Package, ChevronDown } from 'lucide-react';
+import { Menu, X, Package, ChevronDown, Sun, Moon } from 'lucide-react';
+import { useTheme } from './ThemeProvider';
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -11,9 +12,10 @@ const navigation = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <header className="fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-100 dark:border-gray-800">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
@@ -41,7 +43,14 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-4">
+          <button
+            onClick={toggleTheme}
+            className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+          </button>
           <a
             href="#"
             className="text-sm font-semibold leading-6 text-white bg-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors"

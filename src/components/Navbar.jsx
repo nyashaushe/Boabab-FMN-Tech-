@@ -1,5 +1,6 @@
 import React from 'react';
-import { Menu, X, Package, ChevronDown, Search, Bell, User } from 'lucide-react';
+import { Menu, X, Package, Sun, Moon } from 'lucide-react';
+import { useTheme } from './ThemeProvider';
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -7,74 +8,58 @@ const navigation = [
   { name: 'About', href: '#about' },
   { name: 'Blog', href: '#blog' },
   { name: 'Contact', href: '#contact' },
+  { name: 'Documentation', href: '#docs' },
+  { name: 'Support', href: '#support' },
+  { name: 'Pricing', href: '#pricing' },
 ];
+
+// Group navigation items for mobile menu
+const mobileNavigation = {
+  main: navigation.slice(0, 5), // First 5 items
+  secondary: navigation.slice(5), // Remaining items
+};
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const [searchOpen, setSearchOpen] = React.useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <header className="fixed top-0 left-0 right-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-100 dark:border-gray-800">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Package className="h-8 w-8 text-indigo-600" />
-            <span className="font-bold text-xl">Baobab FNM Tech</span>
+            <span className="font-bold text-xl text-gray-900 dark:text-white">Boabab FMN Tech</span>
           </a>
         </div>
-
-        {/* Search bar */}
-        <div className={`absolute left-0 top-full w-full bg-white p-4 border-b border-gray-100 transition-all duration-300 ${searchOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
-          <div className="max-w-3xl mx-auto flex items-center gap-4">
-            <input
-              type="text"
-              placeholder="Search products..."
-              className="flex-1 border-0 bg-gray-100 rounded-lg py-2 px-4 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
-            />
-            <button
-              onClick={() => setSearchOpen(false)}
-              className="p-2 text-gray-500 hover:text-gray-700"
-            >
-              <X className="h-5 w-5" />
-            </button>
-          </div>
-        </div>
-
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
             onClick={() => setMobileMenuOpen(true)}
           >
+            <span className="sr-only">Open main menu</span>
             <Menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors"
+              className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
             >
               {item.name}
             </a>
           ))}
         </div>
-
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-4">
           <button
-            onClick={() => setSearchOpen(!searchOpen)}
-            className="p-2 text-gray-500 hover:text-gray-700"
+            onClick={toggleTheme}
+            className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            aria-label="Toggle theme"
           >
-            <Search className="h-5 w-5" />
-          </button>
-          <button className="p-2 text-gray-500 hover:text-gray-700 relative">
-            <Bell className="h-5 w-5" />
-            <span className="absolute top-1 right-1 h-2 w-2 bg-red-500 rounded-full"></span>
-          </button>
-          <button className="p-2 text-gray-500 hover:text-gray-700">
-            <User className="h-5 w-5" />
+            {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
           </button>
           <a
             href="#"
@@ -86,48 +71,84 @@ export default function Navbar() {
       </nav>
       
       {/* Mobile menu */}
-      <div className={`lg:hidden ${mobileMenuOpen ? 'fixed inset-0 z-50' : 'hidden'}`}>
-        <div className="fixed inset-0 bg-black/20" onClick={() => setMobileMenuOpen(false)} />
-        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
-              <Package className="h-8 w-8 text-indigo-600" />
-              <span className="font-bold text-xl">Boabab FMN Tech</span>
-            </a>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <X className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="block text-sm font-semibold leading-6 text-white bg-indigo-600 px-4 py-2 rounded-lg text-center"
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-[100] lg:hidden">
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-gray-900/70 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+          
+          {/* Menu panel */}
+          <div className="fixed inset-y-0 right-0 z-[101] w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm">
+            <div className="flex items-center justify-between">
+              <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
+                <Package className="h-8 w-8 text-indigo-600" />
+                <span className="font-bold text-xl text-gray-900 dark:text-white">Boabab FMN Tech</span>
+              </a>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={toggleTheme}
+                  className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                  aria-label="Toggle theme"
                 >
-                  Get Started
-                </a>
+                  {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+                </button>
+                <button
+                  type="button"
+                  className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span className="sr-only">Close menu</span>
+                  <X className="h-6 w-6" aria-hidden="true" />
+                </button>
               </div>
             </div>
+            
+            <nav className="mt-6 relative">
+              <div className="-my-6 divide-y divide-gray-500/10 dark:divide-gray-700">
+                {/* Main navigation */}
+                <div className="space-y-1 py-6">
+                  {mobileNavigation.main.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+
+                {/* Secondary navigation */}
+                <div className="space-y-1 py-6">
+                  {mobileNavigation.secondary.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="block rounded-lg px-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+                
+                {/* Actions */}
+                <div className="py-6">
+                  <a
+                    href="#"
+                    className="block text-sm font-semibold leading-6 text-white bg-indigo-600 px-4 py-2 rounded-lg text-center hover:bg-indigo-700"
+                  >
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
-      </div>
+      )}
     </header>
   );
 }

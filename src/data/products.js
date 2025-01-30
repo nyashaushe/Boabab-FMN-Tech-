@@ -1,22 +1,20 @@
 export const products = [
   {
     id: '1',
-    name: 'Enterprise School Management System',
-    description: 'A comprehensive school management system designed for educational institutions. Features include student information management, attendance tracking, grade management, course scheduling, parent communication portal, fee management, library management, and detailed academic performance analytics. The system streamlines administrative tasks, enhances communication between teachers, students and parents, while providing real-time insights into student progress and institutional operations.',
-    shortDescription: 'Advanced SMS for growing your School',
-    category: 'school-admin',
-    price: 499,
+    name: 'SMS System',
+    description: 'Enterprise-grade SMS solution with advanced features like bulk messaging, automated responses, and analytics.',
+    shortDescription: 'Enterprise SMS platform',
+    category: 'messaging',
+    price: 299,
     features: [
-      'Student Information Management',
-      'Attendance Tracking',
-      'Grade Management',
-      'Course Scheduling',
-      'Parent Communication Portal',
-      'Fee Management',
-      'Library Management',
-      'Academic Performance Analytics'
+      'Bulk Messaging',
+      'Automated Responses',
+      'Analytics Dashboard',
+      'API Integration',
+      'Custom Templates'
     ],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000'
+    image: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&q=80&w=1000',
+    featureIcons: ['message', 'zap', 'chart', 'shield', 'users']
   },
   {
     id: '2',
@@ -32,7 +30,8 @@ export const products = [
       'Conflict Resolution',
       'Calendar Integration'
     ],
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1000'
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1000',
+    featureIcons: ['users', 'chart', 'shield', 'zap', 'message']
   },
   {
     id: '3',
@@ -48,6 +47,7 @@ export const products = [
       'Progress Tracking',
       'Interactive Learning Tools'
     ],
-    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=1000'
+    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=1000',
+    featureIcons: ['users', 'message', 'chart', 'shield', 'zap']
   }
 ];

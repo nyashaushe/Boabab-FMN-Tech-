@@ -1,5 +1,7 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Rocket, Shield, Globe } from 'lucide-react';
+import { Button } from './ui/Button';
+import { ArrowRight } from 'lucide-react';
+import { coreFeatures } from '../data/features';
 
 export default function Hero() {
   return (
@@ -16,36 +18,40 @@ export default function Hero() {
       
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
             Transform Your Business with Smart Software Solutions
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Empower your business with our suite of digital products. From CRM to AI chatbots, we provide the tools you need to succeed in the digital age.
+          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+            Empower your business with our suite of digital products. From SMS to AI chatbots, we provide the tools you need to succeed in the digital age.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#products"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            <Button
+              variant="primary"
+              size="md"
+              rightIcon={<ArrowRight className="h-4 w-4" />}
+              onClick={() => window.location.href = '#products'}
             >
               Explore Products
-            </a>
-            <a href="#demo" className="text-sm font-semibold leading-6 text-gray-900 flex items-center gap-1">
-              Book a Demo <ArrowRight className="h-4 w-4" />
-            </a>
+            </Button>
+            <Button
+              variant="ghost"
+              rightIcon={<ArrowRight className="h-4 w-4" />}
+              onClick={() => window.location.href = '#demo'}
+            >
+              Book a Demo
+            </Button>
           </div>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { icon: Sparkles, title: 'AI-Powered', description: 'Advanced artificial intelligence integration' },
-            { icon: Shield, title: 'Enterprise Security', description: 'Bank-grade security protocols' },
-            { icon: Globe, title: 'Global Scale', description: 'Worldwide infrastructure' },
-            { icon: Rocket, title: 'Fast Deploy', description: 'Quick implementation' },
-          ].map((feature, index) => (
-            <div key={index} className="flex flex-col items-center text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl shadow-sm">
-              <feature.icon className="h-8 w-8 text-indigo-600 mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
-              <p className="mt-2 text-sm text-gray-600">{feature.description}</p>
+          {coreFeatures.map((feature, index) => (
+            <div 
+              key={index} 
+              className="flex flex-col items-center text-center p-6 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl shadow-sm"
+            >
+              <feature.icon className="h-8 w-8 text-indigo-600 dark:text-indigo-400 mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>
