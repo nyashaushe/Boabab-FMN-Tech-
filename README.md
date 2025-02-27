@@ -1,6 +1,6 @@
-# Boabab FMN Tech Website
+# Baobab Stack Website
 
-A modern, responsive website for Boabab FMN Tech showcasing their software solutions and services.
+A modern, responsive website for Baobab Stack showcasing their software solutions and services.
 
 ## Tech Stack
 

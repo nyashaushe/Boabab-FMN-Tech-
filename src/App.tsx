@@ -9,9 +9,9 @@ import { ThemeProvider } from './components/ThemeProvider';
 function App() {
   return (
     <ThemeProvider>
-      <div className="bg-white dark:bg-gray-900">
+      <div className="min-h-screen bg-white dark:bg-gray-900">
         <Navbar />
-        <main>
+        <main className="pt-16">
           <Hero />
           <ProductGrid />
           <Testimonials />

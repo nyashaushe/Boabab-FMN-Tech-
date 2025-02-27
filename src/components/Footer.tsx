@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="space-y-8">
             <div className="flex items-center gap-2">
               <Package className="h-8 w-8 text-indigo-500" />
-              <span className="text-white font-bold text-xl">Baobab FNM Tech</span>
+              <span className="text-white font-bold text-xl">Baobab Stack</span>
             </div>
             <p className="text-sm leading-6 text-gray-300">
               Empowering businesses with innovative software solutions.

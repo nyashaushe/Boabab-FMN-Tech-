@@ -3,10 +3,10 @@ import {
   Shield, 
   Globe, 
   Rocket, 
-  Users, 
-  BarChart, 
-  MessageSquare, 
-  Zap,
+  Code,
+  Bot,
+  Workflow,
+  Database,
   Package,
   Facebook, 
   Twitter, 
@@ -17,24 +17,24 @@ import {
 // Core feature icons used in Hero section
 export const coreFeatures = [
   { 
-    icon: Sparkles, 
-    title: 'AI-Powered', 
-    description: 'Advanced artificial intelligence integration' 
+    icon: Code, 
+    title: 'Web Excellence', 
+    description: 'Custom websites & e-commerce solutions' 
   },
   { 
-    icon: Shield, 
-    title: 'Enterprise Security', 
-    description: 'Bank-grade security protocols' 
+    icon: Bot, 
+    title: 'AI Automation', 
+    description: 'n8n-powered workflow automation' 
   },
   { 
-    icon: Globe, 
-    title: 'Global Scale', 
-    description: 'Worldwide infrastructure' 
+    icon: Workflow, 
+    title: 'Smart Integration', 
+    description: 'Seamless system connectivity' 
   },
   { 
-    icon: Rocket, 
-    title: 'Fast Deploy', 
-    description: 'Quick implementation' 
+    icon: Database, 
+    title: 'Data Intelligence', 
+    description: 'Real-time insights & analytics' 
   }
 ];
 
@@ -66,4 +66,28 @@ export function getFeatureIcon(name) {
 // Helper function to get social icon by name
 export function getSocialIcon(name) {
   return socialIcons[name] || Package; // Default to Package if icon not found
-} 
+}
+
+// Social media links
+export const socialLinks = [
+  {
+    name: 'LinkedIn',
+    href: '#',
+    icon: Linkedin
+  },
+  {
+    name: 'Twitter',
+    href: '#',
+    icon: Twitter
+  },
+  {
+    name: 'Facebook',
+    href: '#',
+    icon: Facebook
+  },
+  {
+    name: 'Instagram',
+    href: '#',
+    icon: Instagram
+  }
+]; 

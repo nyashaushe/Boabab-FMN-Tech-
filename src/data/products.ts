@@ -1,53 +1,59 @@
 export const products = [
   {
     id: '1',
-    name: 'Enterprise School Management System',
-    description: 'A comprehensive school management system designed for educational institutions. Features include student information management, attendance tracking, grade management, course scheduling, parent communication portal, fee management, library management, and detailed academic performance analytics. The system streamlines administrative tasks, enhances communication between teachers, students and parents, while providing real-time insights into student progress and institutional operations.',
-    shortDescription: 'Advanced SMS for growing your School',
-    category: 'school-admin',
-    price: 499,
+    name: 'Web Development Solutions',
+    description: 'Custom website design and development services tailored to your brand. From responsive designs to e-commerce platforms, we create digital experiences that drive results.',
+    shortDescription: 'Custom websites & e-commerce solutions',
+    category: 'web-dev',
+    price: 'Custom',
     features: [
-      'Student Information Management',
-      'Attendance Tracking',
-      'Grade Management',
-      'Course Scheduling',
-      'Parent Communication Portal',
-      'Fee Management',
-      'Library Management',
-      'Academic Performance Analytics'
+      'Custom Website Design & Development',
+      'E-commerce Solutions',
+      'Content Management Systems (CMS)',
+      'Responsive Design',
+      'SEO Optimization',
+      'Performance Optimization',
+      'Security Implementation',
+      'Maintenance & Support'
     ],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000'
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000'
   },
   {
     id: '2',
-    name: 'School Timetable Manager',
-    description: 'Simplify class scheduling and resource allocation with our intelligent timetable system. Perfect for managing multiple classes, teachers, and facilities efficiently.',
-    shortDescription: 'Smart class scheduling solution',
-    category: 'school-admin',
-    price: 299,
+    name: 'AI Automation Services',
+    description: 'Streamline your business processes with our n8n-powered automation solutions. From workflow automation to intelligent chatbots, we help you achieve operational excellence.',
+    shortDescription: 'Intelligent process automation',
+    category: 'ai-automation',
+    price: 'Custom',
     features: [
-      'Automatic Timetable Generation',
-      'Teacher Schedule Management',
-      'Classroom Allocation',
-      'Conflict Resolution',
-      'Calendar Integration'
+      'Workflow Automation with n8n',
+      'AI-Powered Chatbots',
+      'Data Integration & Processing',
+      'Lead Generation Automation',
+      'Social Media Automation',
+      'Email Marketing Automation',
+      'CRM Integration',
+      'Custom Automation Solutions'
     ],
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1000'
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000'
   },
   {
     id: '3',
-    name: 'School Learning Platform',
-    description: 'Comprehensive e-learning platform for schools. Includes virtual classrooms, assignment management, online assessments, and progress tracking.',
-    shortDescription: 'Complete e-learning solution',
-    category: 'e-learning',
-    price: 399,
+    name: 'Business Integration Solutions',
+    description: 'Comprehensive integration solutions that connect your business systems and automate data flow. Enhance efficiency and decision-making with real-time insights.',
+    shortDescription: 'Seamless system integration',
+    category: 'integration',
+    price: 'Custom',
     features: [
-      'Virtual Classrooms',
-      'Assignment Management',
-      'Online Assessments',
-      'Progress Tracking',
-      'Interactive Learning Tools'
+      'System Integration',
+      'API Development',
+      'Data Synchronization',
+      'Real-time Analytics',
+      'Custom Dashboards',
+      'Automated Reporting',
+      'Process Optimization',
+      'Scalable Architecture'
     ],
-    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=1000'
+    image: 'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&q=80&w=1000'
   }
 ] as const;
