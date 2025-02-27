@@ -24,10 +24,10 @@ const navigation = {
     { name: 'Terms', href: '#' },
   ],
   social: [
-    { name: 'Facebook', href: '#' },
-    { name: 'Twitter', href: '#' },
-    { name: 'Instagram', href: '#' },
-    { name: 'LinkedIn', href: '#' }
+    { name: 'Facebook', href: 'https://facebook.com/baobabstack' },
+    { name: 'Twitter', href: 'https://twitter.com/baobabstack' },
+    { name: 'Instagram', href: 'https://instagram.com/baobabstack' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/baobab-stack' }
   ],
 };
 
@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="space-y-8">
             <div className="flex items-center gap-2">
               <BrandIcon className="h-8 w-8 text-indigo-500 dark:text-indigo-400" />
-              <span className="text-white font-bold text-xl">Boabab FMN Tech</span>
+              <span className="text-white font-bold text-xl">Baobab Stack</span>
             </div>
             <p className="text-sm leading-6 text-gray-300">
               Empowering businesses with innovative software solutions.

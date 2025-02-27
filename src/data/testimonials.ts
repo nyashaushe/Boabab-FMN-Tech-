@@ -10,7 +10,7 @@ export const testimonials = [
     id: '2',
     name: 'Michael Chen',
     company: 'Tech Innovations Inc',
-    content: "The n8n automation solutions implemented by Savanna AI have revolutionized our business processes. We've seen a 60% reduction in manual tasks and improved customer response times.",
+    content: "The n8n automation solutions implemented by Baobab Stack have revolutionized our business processes. We've seen a 60% reduction in manual tasks and improved customer response times.",
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400'
   },
   {

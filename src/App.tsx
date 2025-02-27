@@ -1,25 +1,19 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ProductGrid from './components/ProductGrid';
-import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
-import { ThemeProvider } from './components/ThemeProvider';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 
-function App() {
+export default function App() {
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-900">
-        <Navbar />
-        <main className="pt-16">
-          <Hero />
-          <ProductGrid />
-          <Testimonials />
-        </main>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
-
-export default App;

@@ -8,7 +8,7 @@ const navigation = [
   { name: 'About', href: '#about' },
   { name: 'Blog', href: '#blog' },
   { name: 'Contact', href: '#contact' },
-  { name: 'Documentation', href: '#docs' },
+  // { name: 'Documentation', href: '#docs' },
   { name: 'Support', href: '#support' },
   { name: 'Pricing', href: '#pricing' },
 ];
@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Package className="h-8 w-8 text-indigo-600" />
-            <span className="font-bold text-xl text-gray-900 dark:text-white">Boabab FMN Tech</span>
+            <span className="font-bold text-xl text-gray-900 dark:text-white">Boabab Stack</span>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -84,7 +84,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
                 <Package className="h-8 w-8 text-indigo-600" />
-                <span className="font-bold text-xl text-gray-900 dark:text-white">Boabab FMN Tech</span>
+                <span className="font-bold text-xl text-gray-900 dark:text-white">Baobab Stack</span>
               </a>
               <div className="flex items-center gap-2">
                 <button

@@ -3,7 +3,7 @@ export const testimonials = [
     id: '1',
     name: 'Sarah Johnson',
     company: 'Domboramwari High School.',
-    content: 'The SMS system has transformed how we manage studnt and parent relationships. The analytics features are particularly impressive.',
+    content: 'The SMS system has transformed how we manage students and parent relationships. The analytics features are particularly impressive.',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400'
   },
   {

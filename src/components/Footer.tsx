@@ -24,10 +24,10 @@ const navigation = {
     { name: 'Terms', href: '#' },
   ],
   social: [
-    { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
+    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/baobabstack' },
+    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/baobabstack' },
+    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/baobabstack' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/baobab-stack' },
   ],
 };
 
@@ -113,7 +113,7 @@ export default function Footer() {
         </div>
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-400">
-            &copy; 2025 Baobab FNM Tech, Inc. All rights reserved.
+            &copy; 2025 Baobab Stack, Inc. All rights reserved.
           </p>
         </div>
       </div>

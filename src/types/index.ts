@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   description: string;
   shortDescription: string;
-  category: 'crm' | 'booking' | 'chatbot' | 'analytics';
+  category: 'crm' | 'booking' | 'sms' |'Al Agents'| 'chatbot' | 'analytics';
   price: number;
   features: string[];
   image: string;

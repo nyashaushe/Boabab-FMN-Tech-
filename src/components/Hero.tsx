@@ -37,7 +37,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300"
           >
-            Welcome to Savanna AI Solutions - Your premier partner for cutting-edge web development and intelligent automation solutions. Transform your business with our innovative technology solutions.
+            Welcome to Baobab Stack- Your premier partner for cutting-edge web development and intelligent automation solutions. Transform your business with our innovative technology solutions.
           </motion.p>
           <motion.div
             initial={{ y: 20, opacity: 0 }}

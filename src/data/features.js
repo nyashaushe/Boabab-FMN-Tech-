@@ -11,7 +11,11 @@ import {
   Facebook, 
   Twitter, 
   Instagram, 
-  Linkedin 
+  Linkedin,
+  Users,
+  BarChart,
+  MessageSquare,
+  Zap
 } from 'lucide-react';
 
 // Core feature icons used in Hero section
@@ -72,22 +76,22 @@ export function getSocialIcon(name) {
 export const socialLinks = [
   {
     name: 'LinkedIn',
-    href: '#',
+    href: 'https://linkedin.com/company/baobab-stack',
     icon: Linkedin
   },
   {
     name: 'Twitter',
-    href: '#',
+    href: 'https://twitter.com/baobabstack',
     icon: Twitter
   },
   {
     name: 'Facebook',
-    href: '#',
+    href: 'https://facebook.com/baobabstack',
     icon: Facebook
   },
   {
     name: 'Instagram',
-    href: '#',
+    href: 'https://instagram.com/baobabstack',
     icon: Instagram
   }
 ]; 

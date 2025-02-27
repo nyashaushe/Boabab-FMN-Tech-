@@ -22,7 +22,7 @@ export default function Hero() {
             Transform Your Business with Smart Software Solutions
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Empower your business with our suite of digital products. From SMS to AI chatbots, we provide the tools you need to succeed in the digital age.
+            Empower your business with our suite of digital products. From SMS to AI chatbots and AI Agents, we provide the tools you need to succeed in the digital age.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button

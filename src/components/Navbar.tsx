@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Package className="h-8 w-8 text-indigo-600" aria-hidden="true" />
-            <span className="font-bold text-xl">Savanna AI Solutions</span>
+            <span className="font-bold text-xl">Baobab Stack AI Solutions</span>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -81,7 +81,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-2">
               <Package className="h-8 w-8 text-indigo-600" aria-hidden="true" />
-              <span className="font-bold text-xl dark:text-white">Savanna AI Solutions</span>
+              <span className="font-bold text-xl dark:text-white">Baobab Stack</span>
             </Link>
             <button
               type="button"
