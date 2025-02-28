@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -7,7 +7,7 @@ import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
-    <Router basename="/baobab-stack">
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
