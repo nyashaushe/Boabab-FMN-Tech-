@@ -7,7 +7,7 @@ import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/baobab-stack">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,5 +1,5 @@
 {
-  "name": "Buidify Tech",
+  "name": "baobab-stack",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -8,6 +8,8 @@
     "build": "tsc && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "server:build": "tsc -p tsconfig.server.json",
     "server:start": "node dist/server/index.js",
     "server:dev": "tsx watch server/index.ts"

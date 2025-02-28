@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, X, Package, ChevronDown, Sun, Moon } from 'lucide-react';
+import { Menu, X, Package, Sun, Moon } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import { Link } from 'react-router-dom';
 
