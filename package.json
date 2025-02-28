@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages --dist dist --dotfiles",
+    "deploy": "gh-pages -d dist -t true",
     "server:build": "tsc -p tsconfig.server.json",
     "server:start": "node dist/server/index.js",
     "server:dev": "tsx watch server/index.ts"
